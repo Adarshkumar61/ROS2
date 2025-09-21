@@ -22,6 +22,7 @@ setup(
     'console_scripts': [
         'talker = my_first_pkg.talker:main',
         'listener = my_first_pkg.listener:main',
+        'robot_controller = my_first_pkg.robot_controller:main',
     ],
 },
 )
