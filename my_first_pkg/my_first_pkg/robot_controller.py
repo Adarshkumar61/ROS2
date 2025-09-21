@@ -62,3 +62,27 @@
 #     main()
 
 import rclpy
+from rclpy.node import Node
+
+class RobotBattery(Node):
+    def __init__(self):
+        super().__init__('robot_battery_level')  # ✅ node name is lowercase, consistent
+
+        # ✅ Declare parameter with correct name
+        self.declare_parameter('battery_level', 67)
+
+        # ✅ Read the same parameter
+        battery = self.get_parameter('battery_level').get_parameter_value().integer_value
+
+        # ✅ Use .info() to log
+        self.get_logger().info(f'RVA current battery level is: {battery}%')
+
+def main(args=None):
+    rclpy.init(args=args)  # ✅ only once
+    node = RobotBattery()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
