@@ -5,7 +5,7 @@ from std_msgs.msg import String
 class Subscriber(Node):
     def __init__(self):
         super().__init__('Publisher')
-        self.subscriptions = self.create_subscription(
+        self.subscriptions(
             String,
             'chatter',
             self.listener_callback,
