@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'my_first_node = my_robot_pkg.my_first_node:main',
+            'talker = my_robot_pkg.talker:main',
         ],
     },
 )
