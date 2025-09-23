@@ -23,6 +23,7 @@ setup(
             'my_first_node = my_robot_pkg.my_first_node:main',
             'talker = my_robot_pkg.talker:main',
             'listener = my_robot_pkg.listener:main',
+            'robot_speed_param_ex = my_robot_pkg.robot_speed_param_ex:main',
         ],
     },
 )
