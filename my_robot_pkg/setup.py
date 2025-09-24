@@ -25,6 +25,8 @@ setup(
             'listener = my_robot_pkg.listener:main',
             'robot_speed_param_ex = my_robot_pkg.robot_speed_param_ex:main',
             'real_time_param_change_ex = my_robot_pkg.real_time_param_change_ex:main',
+            'service_ex = my_robot_pkg.service_ex:main',
+            'client_ex = my_robot_pkg.client_ex:main',
         ],
     },
 )
