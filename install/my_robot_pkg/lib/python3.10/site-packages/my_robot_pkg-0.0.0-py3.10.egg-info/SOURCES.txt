@@ -11,6 +11,8 @@ setup.py
 my_robot_pkg/__init__.py
 my_robot_pkg/listener.py
 my_robot_pkg/my_first_node.py
+my_robot_pkg/real_time_param_change_ex.py
+my_robot_pkg/robot_speed_param_ex.py
 my_robot_pkg/talker.py
 resource/my_robot_pkg
 test/test_copyright.py

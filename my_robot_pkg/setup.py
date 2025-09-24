@@ -24,6 +24,7 @@ setup(
             'talker = my_robot_pkg.talker:main',
             'listener = my_robot_pkg.listener:main',
             'robot_speed_param_ex = my_robot_pkg.robot_speed_param_ex:main',
+            'real_time_param_change_ex = my_robot_pkg.real_time_param_change_ex:main',
         ],
     },
 )

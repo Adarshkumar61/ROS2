@@ -5,7 +5,7 @@ from std_msgs.msg import String
 class Subscriber(Node):
     def __init__(self):
         super().__init__('Publisher')
-        self.subscriptions(
+        self.subscriptions = self.create_subscription(
             String,
             'chatter',
             self.listener_callback,
@@ -22,3 +22,6 @@ def main(args = None):
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
