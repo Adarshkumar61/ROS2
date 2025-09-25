@@ -12,7 +12,7 @@ class RobotSpeed(Node):
 
     def parameter_callback(self, params):
         for param in params:
-            if self.name == 'robot_speed':
+            if param.name == 'robot_speed':
                 self.get_logger().info(f'B2S speed updated to: {param.value}km/h')
         return rclpy.parameter.ParameterEventHandler.Result(successful=True)
     
