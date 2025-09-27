@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>rivzz_visualize</name>
+  <version>0.0.0</version>
+  <description>URDF visualization package</description>
+  <maintainer email="adarshb2k61">Adarsh</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <depend>rclpy</depend>
+  <depend>robot_state_publisher</depend>
+  <exec_depend>rviz2</exec_depend>
+</package>
