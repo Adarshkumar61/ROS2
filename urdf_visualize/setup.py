@@ -1,8 +1,8 @@
+from setuptools import setup
 import os
 from glob import glob
-from setuptools import setup
 
-package_name = 'urdf_robot_visualize'
+package_name = 'urdf_visualize'
 
 setup(
     name=package_name,
@@ -12,19 +12,17 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        # Install URDF and launch files
-        (os.path.join('share', package_name, 'urdf'), glob('urdf/*.xacro')),
         (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
+        (os.path.join('share', package_name, 'urdf'), glob('urdf/*.urdf')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='adarsh61',
-    maintainer_email='adarsh61@example.com',
-    description='URDF visualization with a cylinder',
+    maintainer_email='adarsh61@todo.todo',
+    description='URDF Visualization Package',
     license='Apache License 2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [],
     },
 )
-
