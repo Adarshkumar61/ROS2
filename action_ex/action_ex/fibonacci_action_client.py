@@ -6,7 +6,9 @@ from example_interfaces.action import Fibonacci
 class FibonacciActionClient(Node):
     def __init__(self):
         super().__init__('fibonacci_action_client')
-        self._client = ActionClient(self, Fibonacci, 'fibonacci')
+        self._client = ActionClient(self,
+                                    Fibonacci,
+                                    'fibonacci')
 
     def send_goal(self, order):
         goal_msg = Fibonacci.Goal()

@@ -17,14 +17,19 @@ class FibonacciActionServer(Node):
 
     def execute_callback(self, goal_handle):
         self.get_logger().info('Executing goal...')
+    #    this function runs whenever the client sends a goal.
+
         sequence = [0, 1]
         for i in range(1, goal_handle.request.order):
             sequence.append(sequence[i] + sequence[i-1])
+
             feedback = Fibonacci.Feedback()
             feedback.sequence = sequence
             goal_handle.publish_feedback(feedback)
             self.get_logger().info(f'Feedback: {sequence}')
+
         goal_handle.succeed()
+
         result = Fibonacci.Result()
         result.sequence = sequence
         return result
