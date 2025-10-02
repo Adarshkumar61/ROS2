@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'robot_speed_parameter_change_in_real_time = parameter_ex.robot_speed_parameter_change_in_real_time:main',
         ],
     },
 )
