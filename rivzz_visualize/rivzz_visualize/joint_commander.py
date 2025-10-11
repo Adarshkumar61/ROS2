@@ -2,7 +2,6 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
 import math
-import time
 
 class JointPublisher(Node):
     def __init__(self):
