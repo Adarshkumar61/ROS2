@@ -5,13 +5,13 @@ from std_msgs.msg import String
 class Subscriber(Node):
     def __init__(self):
         super().__init__('Publisher')
-        self.subscriptions = self.create_subscription(
+        self.subscription = self.create_subscription(
             String,
             'chatter',
             self.listener_callback,
             10
         )
-        self.subscriptions
+        self.subscription
     
     def listener_callback(self, msg):
         self.get_logger().info(f'I heard: {msg.data}')
