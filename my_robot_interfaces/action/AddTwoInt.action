@@ -1,0 +1,11 @@
+# File: my_robot_interfaces/action/AddTwoInt.action
+
+# Goal - what we want to achieve
+int64 a
+int64 b
+---
+# Result - final result after action completes
+int64 sum
+---
+# Feedback - periodic updates during execution
+int64 progress_percentage
