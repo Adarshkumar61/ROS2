@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import rclpy
 from rclpy.action import ActionClient
@@ -28,7 +27,7 @@ class AddTwoIntActionClient(Node):
         
         self._send_goal_future.add_done_callback(self.goal_response_callback)
 
-    def goal_response_callback(self, future):
+    def goal_response_callback(self, future): 
         goal_handle = future.result()
         
         if not goal_handle.accepted:

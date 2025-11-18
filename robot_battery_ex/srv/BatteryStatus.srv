@@ -1,5 +1,0 @@
-# Request
-float32 voltage
----
-# Response
-string status

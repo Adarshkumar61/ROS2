@@ -4,7 +4,7 @@ from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from ament_index_python.packages import get_package_share_directory
 import os
- 
+
 def generate_launch_description():
     pkg_share = get_package_share_directory('dancing_robot')
     urdf_file = os.path.join(pkg_share, 'urdf', 'dancing_robot.urdf')
